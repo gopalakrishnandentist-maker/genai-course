@@ -29,3 +29,9 @@ Setup: `python3 -m venv venv`, `source venv/bin/activate`, `pip install streamli
 Run it with `streamlit run grade_app.py`.
 
 The student list lives in `st.session_state`. Streamlit reruns the whole file on every click, so a plain `students = []` at the top is reset each time and adding a second student wipes the first.
+
+## Week 2, Day 1: Reusable prompt for a 7-day South Indian meal plan
+
+`w2-day1/meal_plan_prompt.md` is a prompt built on Role, Task, Context, Few-shot and Response. Change only the FOR block (age, weight, activity, allergies, dislikes, cooking time, household, city and month) and paste the rest into any AI chat tool.
+
+The first draft left the calories to a guess, allowed dinners with no protein, put slow dishes on weekdays and let the model wrap the table in its own notes. The final version fixes each one, and two runs with different FOR blocks gave the same 28-row table with only the dishes and portions changing.
