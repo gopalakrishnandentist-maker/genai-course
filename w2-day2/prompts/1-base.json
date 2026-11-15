@@ -1,0 +1,34 @@
+{
+  "subject": "a woman in her sixties in a mustard and maroon checked Chettinad kandangi cotton sari, kneeling barefoot, drawing a white rice-flour pulli kolam with her fingers",
+  "setting": {
+    "place": "the open central courtyard (mutram) of a Chettinad mansion in Karaikudi, Sivaganga district: red and ochre Athangudi tiled floor, dark Burma teak pillars, lime-plastered walls, a brass kuthuvilakku lamp unlit on the step",
+    "era": "present day",
+    "time_of_day": "first light on a Margazhi morning in December, before sunrise"
+  },
+  "lighting": "soft cool skylight falling into the open courtyard, faint mist, no direct sun",
+  "camera": {
+    "shot": "wide",
+    "lens": "35mm",
+    "angle": "eye level from the shaded verandah, pillars framing the courtyard"
+  },
+  "palette": [
+    "Athangudi red",
+    "ochre",
+    "teak brown",
+    "lime white",
+    "kandangi mustard",
+    "early morning blue"
+  ],
+  "style": "documentary photograph, natural colour, fine film grain, quiet and unposed",
+  "aspect_ratio": "4:5",
+  "avoid": [
+    "temple gopurams or postcard landmarks",
+    "Kanchipuram silk or bridal jewellery on a working morning",
+    "jasmine garlands, rangoli powder colours or diya rows",
+    "North Indian or Rajasthani dress and architecture",
+    "Bollywood styling or posed smiles at the camera",
+    "oversaturated HDR look",
+    "text, logos or watermarks",
+    "extra fingers or distorted hands"
+  ]
+}

@@ -35,3 +35,9 @@ The student list lives in `st.session_state`. Streamlit reruns the whole file on
 `w2-day1/meal_plan_prompt.md` is a prompt built on Role, Task, Context, Few-shot and Response. Change only the FOR block (age, weight, activity, allergies, dislikes, cooking time, household, city and month) and paste the rest into any AI chat tool.
 
 The first draft left the calories to a guess, allowed dinners with no protein, put slow dishes on weekdays and let the model wrap the table in its own notes. The final version fixes each one, and two runs with different FOR blocks gave the same 28-row table with only the dishes and portions changing.
+
+## Week 2, Day 2: JSON prompt template for Tamil scenes
+
+`w2-day2/tamil_prompt.json` describes one scene field by field: a woman in a kandangi cotton sari drawing a pulli kolam in the courtyard of a Chettinad house in Karaikudi, Athangudi tiles and teak pillars, first light in Margazhi. Fields cover subject, setting (place, era, time of day), lighting, camera (shot, lens, angle), palette, style, aspect ratio and an avoid list. `w2-day2/prompts/` holds each run's JSON, with one field changed from the base.
+
+On Gemini, changing `time_of_day` to golden hour came through muted because `lighting` still said cool skylight, and changing `shot` to close-up did nothing until `angle` stopped saying "pillars framing the courtyard". A one-field change only works when no other field describes the same thing. The video run added a `motion` block; Gemini returned 10 seconds at 16:9, so the posted clip is the first five seconds.
