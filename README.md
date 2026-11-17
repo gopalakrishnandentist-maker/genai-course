@@ -41,3 +41,9 @@ The first draft left the calories to a guess, allowed dinners with no protein, p
 `w2-day2/tamil_prompt.json` describes one scene field by field: a woman in a kandangi cotton sari drawing a pulli kolam in the courtyard of a Chettinad house in Karaikudi, Athangudi tiles and teak pillars, first light in Margazhi. Fields cover subject, setting (place, era, time of day), lighting, camera (shot, lens, angle), palette, style, aspect ratio and an avoid list. `w2-day2/prompts/` holds each run's JSON, with one field changed from the base.
 
 On Gemini, changing `time_of_day` to golden hour came through muted because `lighting` still said cool skylight, and changing `shot` to close-up did nothing until `angle` stopped saying "pillars framing the courtyard". A one-field change only works when no other field describes the same thing. The video run added a `motion` block; Gemini returned 10 seconds at 16:9, so the posted clip is the first five seconds.
+
+## Week 2, Day 3: Tracing a LangChain app with LangSmith
+
+`w2-day3/traced_app.py` sends three prompts to gpt-4o-mini through LangChain's `ChatOpenAI`. The file has no tracing code: four environment variables switch LangSmith on and send the runs to a named project. `w2-day3/check_tracing.py` runs first and confirms tracing is on and the key is accepted, because tracing that is off fails silently.
+
+The 250-word explainer prompt was the expensive one: 301 of 384 tokens, 86% of the cost and 3.94 s, driven by its 260 output tokens. The one-word classification took 36 tokens and 1.01 s. A call that failed on a 429 was traced too, with the prompt and the error.
