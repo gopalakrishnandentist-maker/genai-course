@@ -47,3 +47,11 @@ On Gemini, changing `time_of_day` to golden hour came through muted because `lig
 `w2-day3/traced_app.py` sends three prompts to gpt-4o-mini through LangChain's `ChatOpenAI`. The file has no tracing code: four environment variables switch LangSmith on and send the runs to a named project. `w2-day3/check_tracing.py` runs first and confirms tracing is on and the key is accepted, because tracing that is off fails silently.
 
 The 250-word explainer prompt was the expensive one: 301 of 384 tokens, 86% of the cost and 3.94 s, driven by its 260 output tokens. The one-word classification took 36 tokens and 1.01 s. A call that failed on a 429 was traced too, with the prompt and the error.
+
+## Week 2, Day 4: Multi-PDF RAG app with sources
+
+`w2-day4/rag_app.py` is a Streamlit app that indexes several PDFs into one FAISS store and answers from the retrieved chunks with file and page for each. Tested on three sample clinic PDFs in `w2-day4/sample-pdfs/`, where the refund window is planted to disagree (7 against 14 working days): the app reported both sides with their pages instead of picking one. A Sunday-hours question first came back "Not found" although the right pages were retrieved; loosening the prompt's not-found rule fixed it without breaking the disagreement case.
+
+## Week 2, Day 5: Five breakfast ideas from LangChain
+
+`w2-day5/breakfast.py` asks gpt-4o-mini for five healthy South Indian breakfasts with the definition of healthy and the format pinned in the prompt, and prints only `reply.content`. Two runs gave different lists (millet pongal was the only repeat), the format held both times, and one run included rava dosa despite the whole-grain rule. Temperature 0 and protein grams on each line would make the output repeatable and checkable.
