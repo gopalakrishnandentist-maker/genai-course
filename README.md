@@ -55,3 +55,11 @@ The 250-word explainer prompt was the expensive one: 301 of 384 tokens, 86% of t
 ## Week 2, Day 5: Five breakfast ideas from LangChain
 
 `w2-day5/breakfast.py` asks gpt-4o-mini for five healthy South Indian breakfasts with the definition of healthy and the format pinned in the prompt, and prints only `reply.content`. Two runs gave different lists (millet pongal was the only repeat), the format held both times, and one run included rava dosa despite the whole-grain rule. Temperature 0 and protein grams on each line would make the output repeatable and checkable.
+
+## Week 1 project: Student Grade Manager
+
+`week1-project/` is a Streamlit app for recording marks: add students or import a CSV, edit or delete in the table, see grades, class statistics, a grade chart and the students below the pass mark, and download the results. Logic in `grades.py`, 17 tests. Details in its README.
+
+## Week 2 project: Ask Your Documents
+
+`week2-project/` is a chat app that answers questions from your PDFs with numbered citations to file and page. Follow-up questions are rewritten before search, answers stream in, and disagreements between documents are reported. Retrieval in `rag.py`, prompts in `prompts.py`, 10 offline tests. Details in its README.
